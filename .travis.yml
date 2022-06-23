@@ -16,7 +16,7 @@ before_script:
 script:
   - docker --version # just to print out the docker version used
   - docker build -t udagram-feed .
-  - docker tag simple-node jeffron/udagram-feed:latest
+  - docker tag udagram-feed jeffron/udagram-feed:latest
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME"  --password-stdin
